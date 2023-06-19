@@ -1,0 +1,46 @@
+<div class="card mb-3">
+  <div class="card-content">
+    <div class="content"></div>
+    <InputText
+      *ngIf="selection.inputType === 'text'"
+      formControlName="selection.name"
+      [name]="selection.name"
+      [cssLabelClass]="selection.labelCss"
+      [cssInputClass]="selection.cssClass"
+      [cssClass]="selection.cssClass"
+      [labelText]="selection.label"
+      [id]="selection.id"
+      [type]="selection.inputType"
+      [placeHolder]="selection.placeholder"
+      [disabledInput]="
+        appDisplays.hasOwnProperty(selection.id) ? false : selection.disabled
+      "
+      (inputValue)="addInputItem($event)"
+      ngDefaultControl
+    />
+    <InputSelect
+      *ngIf="selection.inputType === 'select'"
+      [name]="selection.name"
+      [label]="selection.label"
+      [id]="selection.id"
+      [cssClass]="selection.cssClass"
+      [placeHolder]="selection.placeholder"
+      [options]="selection.options"
+      [disabledSelect]="
+        appDisplays.hasOwnProperty(selection.id) ? false : selection.disabled
+      "
+      (updateSelectionInfo)="addSelectionItem($event)"
+    />
+    <EventButton
+      [id]="selection.id"
+      [nextId]="selection.nextId"
+      [topClass]="selection.button.topCss"
+      [btnCss]="selection.button.css"
+      [btnText]="selection.button.title"
+      [btnDisabled]="
+        appBtns.hasOwnProperty(selection.id) ? false : selection.btnDisabled
+      "
+      (updateDisplay)="addDisplayItem($event)"
+    />
+  </div>
+</div>

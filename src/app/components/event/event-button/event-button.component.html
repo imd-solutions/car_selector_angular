@@ -1,0 +1,10 @@
+<div [ngClass]="topClass">
+  <button
+    [id]="id"
+    [class]="btnCss"
+    [disabled]="btnDisabled"
+    (click)="id === 'carCode' ? updateResultBox() : updateSelectBox(nextId)"
+  >
+    {{ btnText }}
+  </button>
+</div>

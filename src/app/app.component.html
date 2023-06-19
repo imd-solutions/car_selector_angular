@@ -1,0 +1,23 @@
+<div class="container">
+  <SelectionBox *ngFor="let selection of selections" [selection]="selection" />
+  <div *ngIf="results" class="card mb-3">
+    <div class="card-content">
+      <div class="content">
+        <h3>Results:</h3>
+        <p>
+          I have
+          {{
+            resultsInformation.carMake === "audi"
+              ? "an " + resultsInformation.carMake
+              : "a " + resultsInformation.carMake
+          }}
+          and the colour is {{ resultsInformation.carColour }}.
+        </p>
+        <p *ngIf="resultsInformation.carColour === 'red'">
+          THE CAR IS RED! NICE!! )
+        </p>
+        <p>REF: {{ resultsInformation.carCode }}</p>
+      </div>
+    </div>
+  </div>
+</div>

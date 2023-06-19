@@ -1,0 +1,112 @@
+{
+  "selections": [
+    {
+      "id": "carMake",
+      "nextId": "carColour",
+      "label": "Make:",
+      "cssClass": "input-select column is-12",
+      "name": "make",
+      "inputType": "select",
+      "disabled": false,
+      "options": [
+        {
+          "id": "audi",
+          "name": "Audi"
+        },
+        {
+          "id": "bmw",
+          "name": "BMW"
+        },
+        {
+          "id": "vauxhal",
+          "name": "Vauxhal"
+        },
+        {
+          "id": "mercedes",
+          "name": "Mercedes"
+        },
+        {
+          "id": "peugeot",
+          "name": "Peugeot"
+        },
+        {
+          "id": "renault",
+          "name": "Renault"
+        }
+      ],
+      "placeholder": "Please select a car make",
+      "btnDisabled": false,
+      "button": {
+        "title": "Next",
+        "id": "doneNextBtn",
+        "topCss": "buttons is-right",
+        "css": "button is-default",
+        "method": {
+          "name": "submitBtn",
+          "action": "completeFormAction"
+        }
+      }
+    },
+    {
+      "id": "carColour",
+      "nextId": "carCode",
+      "label": "Colour:",
+      "cssClass": "input-select column is-12",
+      "name": "colour",
+      "inputType": "select",
+      "disabled": false,
+      "options": [
+        {
+          "id": "blue",
+          "name": "Blue"
+        },
+        {
+          "id": "red",
+          "name": "Red"
+        },
+        {
+          "id": "black",
+          "name": "Black"
+        },
+        {
+          "id": "orange",
+          "name": "Orange"
+        }
+      ],
+      "placeholder": "Please select a car colour",
+      "btnDisabled": false,
+      "button": {
+        "title": "Next",
+        "id": "doneNextBtn",
+        "topCss": "buttons is-right",
+        "css": "button is-default",
+        "method": {
+          "name": "submitBtn",
+          "action": "completeFormAction"
+        }
+      }
+    },
+    {
+      "id": "carCode",
+      "nextId": "carResults",
+      "label": "Code:",
+      "cssClass": "input-text column is-12",
+      "name": "code",
+      "inputType": "text",
+      "disabled": false,
+      "options": [],
+      "placeholder": "Please select a car code",
+      "btnDisabled": true,
+      "button": {
+        "title": "Done",
+        "id": "doneNextBtn",
+        "topCss": "buttons is-right",
+        "css": "button is-success",
+        "method": {
+          "name": "submitBtn",
+          "action": "completeFormAction"
+        }
+      }
+    }
+  ]
+}

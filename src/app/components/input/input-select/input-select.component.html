@@ -1,0 +1,18 @@
+<div [ngClass]="cssClass">
+  <label [for]="name">{{ label }}</label>
+  <div class="select is-fullwidth">
+    <select
+      class="is-fullwidth"
+      [name]="name"
+      [id]="id"
+      defaultValue="default"
+      [disabled]="disabledSelect"
+      (change)="updateBtnStatus(id, $event.target)"
+    >
+      <option value="default" [disabled]="true">{{ placeHolder }}</option>
+      <option *ngFor="let option of options" [value]="option.id">
+        {{ option.name }}
+      </option>
+    </select>
+  </div>
+</div>
